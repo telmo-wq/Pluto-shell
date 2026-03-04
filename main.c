@@ -2,12 +2,14 @@
 #include <unistd.h>
 
 
-int main(){
+int main(void){
     if (isatty(STDIN_FILENO) == 1){
-        shell_interativo;
+        shell_interativo();
     }else{
-        shell_nao_interativo;
+        shell_nao_interativo();
     }
+
+    return (0);
 
 
 }

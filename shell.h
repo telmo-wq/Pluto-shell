@@ -17,8 +17,6 @@ int executar_args(char **args);
 
 int novo_processo(char **args);
 
-char *ler_linha(void);
-
 char *ler_fluxo(void);
 
 int own_cd(char **args);

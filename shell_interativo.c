@@ -6,7 +6,7 @@ void shell_interativo(void){
     int status = -1;
 
     do {
-        printf("simple_prompt$ ");
+        printf("pluto$ ");
         linha = ler_linha();
         args = dividir_linha(linha);
         status = executar_args(args);

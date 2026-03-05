@@ -25,6 +25,22 @@ int executar_args(char **args){
             return ((*builtin_func[i])(args));
         }
     }
-    return (novo_processo(args));
+    int c = 0;
+    int pipe_existe = 0;
+    int pipe_pos = 0;
+
+    while (args[c] != NULL){
+        if (strcmp(args[c], "|") == 0){
+            pipe_existe = 1;
+            break;
+        }
+        c++;
+    }
+
+    if (pipe_existe == 1){
+        comando_pipe(pipe_pos, args);
+    }else {
+        return (novo_processo(args));
+    }
 
 }

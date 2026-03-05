@@ -24,5 +24,5 @@ int own_exit(char **args);
 int own_env(char **args);
 int own_help(char **args);
 
-
+void comando_pipe(int pipe_pos, char **args);
 #endif

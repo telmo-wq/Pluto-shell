@@ -14,8 +14,6 @@ int main(int argc, char *argv[]){
 
     if (isatty(STDIN_FILENO) == 1){
         shell_interativo(argc, argv);
-    }else{
-        shell_nao_interativo();
     }
 
     return (0);

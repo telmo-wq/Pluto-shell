@@ -1,5 +1,5 @@
-shell: batch.o dividir_linha.o executar_args.o ler_fluxo.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o shell_nao_interativo.o
-	gcc batch.o dividir_linha.o executar_args.o ler_fluxo.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o shell_nao_interativo.o -o shell
+shell: batch.o dividir_linha.o executar_args.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o 
+	gcc batch.o dividir_linha.o executar_args.o ler_linha.o main.o novo_processo.o own_cd.o own_env.o own_exit.o own_help.o shell_interativo.o -o shell
 
 main.o: source/main.c 
 	gcc -c source/main.c 
@@ -12,9 +12,6 @@ dividir_linha.o: source/dividir_linha.c source/shell.h
 
 executar_args.o: source/executar_args.c source/shell.h
 	gcc -c source/executar_args.c 
-
-ler_fluxo.o: source/ler_fluxo.c source/shell.h
-	gcc -c source/ler_fluxo.c 
 
 ler_linha.o: source/ler_linha.c source/shell.h
 	gcc -c source/ler_linha.c 
@@ -33,9 +30,6 @@ own_help.o: source/own_help.c source/shell.h
 
 shell_interativo.o: source/shell_interativo.c source/shell.h
 	gcc -c source/shell_interativo.c 
-
-shell_nao_interativo.o: source/shell_nao_interativo.c source/shell.h
-	gcc -c source/shell_nao_interativo.c 
 
 novo_processo.o: source/novo_processo.c source/shell.h 
 	gcc -c source/novo_processo.c

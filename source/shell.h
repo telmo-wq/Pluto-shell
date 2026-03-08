@@ -9,7 +9,7 @@
 #include <sys/wait.h>
 
 void shell_interativo(int argc, char *argv[]);
-void shell_nao_interativo(void);
+
 
 char *ler_linha(void);
 char **dividir_linha(char *linha);
@@ -17,7 +17,7 @@ int executar_args(char **args);
 
 int novo_processo(char **args);
 
-char *ler_fluxo(void);
+
 
 void batch(char *argv);
 

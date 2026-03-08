@@ -1,2 +1,1 @@
-ls
-echo "Ola mundo"
+echo "Primeiro teste"

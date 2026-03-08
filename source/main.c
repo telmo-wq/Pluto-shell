@@ -4,6 +4,11 @@
 
 int main(int argc, char *argv[]){
     if (argc > 1){
+        if (argc > 2){
+            printf("Atenção! Só se pode passar UM arquivo por vez!\n");
+            return 0;
+        }
+
         batch(argv[1]);
         return 0;
     }
